@@ -18,6 +18,6 @@ class Task extends Model
      */
     public function ponderators()
     {
-        return $this->hasMany(Ponderator::class);
+        return $this->belongsToMany(Ponderators::class);
     }
 }

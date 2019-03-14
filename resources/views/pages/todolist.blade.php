@@ -11,6 +11,7 @@
 
     <h1>Ma TODO liste</h1>
     <a href="/">Déconnexion</a>
+    <a href="{!! url('ponderators') !!}">Gérer les pondérateurs</a>
 
     <ul>
         @foreach ($tasks as $task)

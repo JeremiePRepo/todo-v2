@@ -2,14 +2,14 @@
 
 
 
-@section('title','Nouvelle tâche - TODOLIST Organizer')
+@section('title','Nouveau pondérateur - TODOLIST Organizer')
 
 
 
 @section('content')
-<!-- tasks.create.content -->
+<!-- ponderators.create.content -->
 
-    <h1>Créer une nouvelle tâche</h1>
+    <h1>Créer un nouveau pondérateur</h1>
 
     <a href="/">Déconnexion</a>
     <a href="{!! url('todolist') !!}">Retour aux tâches</a>
@@ -24,19 +24,20 @@
         </div>
     @endif
 
-    <form method="POST" action="/todolist">
+    <form method="POST" action="/ponderators">
 
         @csrf
 
-        <div><textarea name="task" placeholder="Nouvelle tâche" required>{{ old('task') }}</textarea></div>
+        <p>Ici bientôt un formulaire de création de pondérateur.</p>
+        {{-- <div><textarea name="task" placeholder="Nouvelle tâche" required>{{ old('task') }}</textarea></div>
         <div>
             <label for="1"><input type="checkbox" name="1"> Travail</label>
             <label for="2"><input type="checkbox" name="2"> Loisirs</label>
         </div>
-        <div><button type="submit">Créer la tâche</button></div>
+        <div><button type="submit">Créer la tâche</button></div> --}}
 
 
     </form>
 
-<!-- /tasks.create.content -->
+<!-- /ponderators.create.content -->
 @endsection

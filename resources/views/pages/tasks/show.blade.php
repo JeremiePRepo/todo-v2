@@ -7,7 +7,7 @@
 
 
 @section('content')
-<!-- tasks.edit.content -->
+<!-- tasks.show.content -->
 
     <h1>Tâche {{ $task->id }}</h1>
 
@@ -18,5 +18,5 @@
 
     <a href="/todolist/{{ $task->id }}/edit">Éditer</a>
 
-<!-- /tasks.edit.content -->
+<!-- /tasks.show.content -->
 @endsection

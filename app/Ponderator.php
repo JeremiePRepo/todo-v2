@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ponderator extends Model
 {
+    // @var array
+    protected $fillable = [];
+
     /**
      * Défini la relation avec les tâches.
      *
@@ -13,6 +16,7 @@ class Ponderator extends Model
      */
     public function tasks()
     {
-        return $this->hasMany(Tasks::class);
+        // return $this->hasMany(Tasks::class);
+        return $this->belongsToMany(Tasks::class);
     }
 }

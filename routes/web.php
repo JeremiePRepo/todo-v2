@@ -33,7 +33,7 @@ DELETE | /todolist/1      | (destroy)
 GET    | /todolist/1/edit | (edit)
 
 Il existe un raccourcis pour toutes ces routes :
-Route::ressource('tasks', 'tasksController');
+Route::resource('tasks', 'tasksController');
 Mais il générerais des urls de type /tasks/ au lieu de /todolist/
 */
 Route::get('/todolist', 'TasksController@index');
@@ -43,3 +43,22 @@ Route::get('/todolist/{task}', 'TasksController@show');
 Route::patch('/todolist/{task}', 'TasksController@update');
 Route::delete('/todolist/{task}', 'TasksController@destroy');
 Route::get('/todolist/{task}/edit', 'TasksController@edit');
+
+/*
+Pondérateurs
+---------------------------------------------------------------------------
+
+Gestion des Ponderateurs :
+-------+---------------------+----------
+VERBE  | /URL                | (méthode)
+-------+---------------------+----------
+GET    | /ponderators        | (index)
+POST   | /ponderators        | (store)
+GET    | /ponderators/create | (create)
+GET    | /ponderators/1      | (show)
+PATCH  | /ponderators/1      | (update)
+DELETE | /ponderators/1      | (destroy)
+GET    | /ponderators/1/edit | (edit)
+*/
+Route::resource('ponderators', 'PonderatorsController');
+// Route::get('/ponderators', 'PonderatorsController@index');

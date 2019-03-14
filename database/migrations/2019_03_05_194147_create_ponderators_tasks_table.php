@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class PonderatorsTasks extends Migration
+class CreatePonderatorsTasksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,8 +15,17 @@ class PonderatorsTasks extends Migration
     {
         Schema::create('ponderators_tasks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('task_id');
-            $table->unsignedInteger('ponderator_id');
+
+            $table->bigInteger('task_id');
+            $table->foreign('task_id')
+                ->references('id')
+                ->on('tasks');
+
+            $table->bigInteger('ponderator_id');
+            $table->foreign('ponderator_id')
+                ->references('id')
+                ->on('ponderators');
+
             $table->timestamps();
         });
     }

@@ -26,7 +26,7 @@ class TasksController extends Controller
     /**
      * Traite le formulaire d'ajout de tâche.
      *
-     * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
+     * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
     public function store()
     {
@@ -52,7 +52,7 @@ class TasksController extends Controller
     /**
      * Affiche une tâche.
      *
-     * @param Task $id
+     * @param Task $task
      *
      * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
      */
@@ -64,7 +64,7 @@ class TasksController extends Controller
     /**
      * Traite le formulaire d'édition de tâche.
      *
-     * @param Task $id
+     * @param Task $task
      *
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
@@ -82,7 +82,7 @@ class TasksController extends Controller
     /**
      * Supprime une tâche.
      *
-     * @param int $id
+     * @param Task $task
      *
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
@@ -96,7 +96,7 @@ class TasksController extends Controller
     /**
      * Affiche la page d'édition d'une tâche.
      *
-     * @param Task $id
+     * @param Task $task
      *
      * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
      */
