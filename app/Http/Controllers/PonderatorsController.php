@@ -11,15 +11,6 @@ use App\Ponderator;
 
 class PonderatorsController extends Controller
 {
-    // TODO :
-    //// App\Http\Controllers\ponderatorsController@index
-    //// App\Http\Controllers\ponderatorsController@store
-    //// App\Http\Controllers\ponderatorsController@create
-    //// App\Http\Controllers\ponderatorsController@show
-    //// App\Http\Controllers\ponderatorsController@update
-    //// App\Http\Controllers\ponderatorsController@destroy
-    // App\Http\Controllers\ponderatorsController@edit
-
     /**
      * Affiche la liste des pondérateurs.
      *

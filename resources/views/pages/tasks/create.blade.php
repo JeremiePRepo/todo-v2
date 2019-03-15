@@ -30,8 +30,9 @@
 
         <div><textarea name="task" placeholder="Nouvelle tâche" required>{{ old('task') }}</textarea></div>
         <div>
-            <label for="1"><input type="checkbox" name="1"> Travail</label>
-            <label for="2"><input type="checkbox" name="2"> Loisirs</label>
+            @foreach ($ponderators as $ponderator)
+                <label for="ponderator[{{ $ponderator->id }}]"><input type="checkbox" name="ponderator[{{ $ponderator->id }}]"> {{ $ponderator->name }}</label>
+            @endforeach
         </div>
         <div><button type="submit">Créer la tâche</button></div>
 
