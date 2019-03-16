@@ -17,6 +17,6 @@ class Ponderator extends Model
     public function tasks()
     {
         // return $this->hasMany(Tasks::class);
-        return $this->belongsToMany(Tasks::class);
+        return $this->belongsToMany(Task::class);
     }
 }

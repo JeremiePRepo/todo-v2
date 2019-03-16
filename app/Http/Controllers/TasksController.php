@@ -31,26 +31,13 @@ class TasksController extends Controller
      */
     public function store()
     {
-        // Tâche
         Task::create(
             request()->validate([
                 'task' => 'required|min:3|max:65000',
             ])
+        )->ponderators()->attach(
+            request()->input('ponderators')
         );
-        // Exemple de réponse pour les pondérateurs :
-        // +request: ParameterBag {#44 ▼
-        //     #parameters: array:3 [▼
-        //       "_token" => "qlFhIlOKyULt7sNZnP0QWIqNnF0SkumJSr9akw27"
-        //       "task" => "qsdd"
-        //       "ponderator" => array:3 [▼
-        //         1 => "on"
-        //         3 => "on"
-        //         4 => "on"
-        //       ]
-        //     ]
-        //   }
-        // Check : https://laravel.com/docs/5.8/eloquent-relationships#many-to-many
-        // Check : https://appdividend.com/2018/05/17/laravel-many-to-many-relationship-example/
 
         return redirect('todolist');
     }

@@ -31,7 +31,7 @@
         <div><textarea name="task" placeholder="Nouvelle tâche" required>{{ old('task') }}</textarea></div>
         <div>
             @foreach ($ponderators as $ponderator)
-                <label for="ponderator[{{ $ponderator->id }}]"><input type="checkbox" name="ponderator[{{ $ponderator->id }}]"> {{ $ponderator->name }}</label>
+                <label for="ponderators[{{ $ponderator->id }}]"><input type="checkbox" name="ponderators[]" value="{{ $ponderator->id }}"> {{ $ponderator->name }}</label>
             @endforeach
         </div>
         <div><button type="submit">Créer la tâche</button></div>
