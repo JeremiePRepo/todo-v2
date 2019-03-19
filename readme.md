@@ -2,4 +2,4 @@
 
 todo :
 - ~~enregistrement des pondérateur lors de la création d'une tâche~~
-- effacement des pondérateurs lors de la suppression d'une tâche
+- effacement de la relation pondérateur-tâche lors de la suppression d'un pondérateur

@@ -32,8 +32,8 @@ class PonderatorsController extends Controller
     {
         Ponderator::create(
             request()->validate([
-                'name'       => 'required|min:3|max:255',
-                'coeficient' => 'required|integer',
+                'name'        => 'required|min:3|max:255',
+                'coefficient' => 'required|integer',
             ])
         );
 

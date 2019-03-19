@@ -11,13 +11,20 @@
 
     <h1>Gestion des pondérateurs</h1>
 
-    <a href="/">Déconnexion</a>
-    <a href="{!! url('todolist') !!}">Retour aux tâches</a>
+    @include('parts.menu')
 
     <ul>
         @foreach ($ponderators as $ponderator)
             <li>
                 {{ $ponderator->name }} ({{ $ponderator->coefficient }})
+                <form method="POST" action="/ponderators/{{ $ponderator->id }}">
+
+                    @method('DELETE')
+                    @csrf
+
+                    <div><button type="submit">Supprimer</button></div>
+
+                </form>
             </li>
         @endforeach
     </ul>

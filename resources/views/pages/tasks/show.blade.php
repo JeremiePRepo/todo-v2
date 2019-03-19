@@ -11,8 +11,7 @@
 
     <h1>Tâche {{ $task->id }}</h1>
 
-    <a href="/">Déconnexion</a>
-    <a href="{!! url('todolist') !!}">Retour aux tâches</a>
+    @include('parts.menu')
 
     <p>{{ $task->task }}</p>
 

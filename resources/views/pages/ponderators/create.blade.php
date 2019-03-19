@@ -11,8 +11,7 @@
 
     <h1>Créer un nouveau pondérateur</h1>
 
-    <a href="/">Déconnexion</a>
-    <a href="{!! url('todolist') !!}">Retour aux tâches</a>
+    @include('parts.menu')
 
     @if ($errors->any())
         <div>
@@ -28,14 +27,9 @@
 
         @csrf
 
-        <p>Ici bientôt un formulaire de création de pondérateur.</p>
-        {{-- <div><textarea name="task" placeholder="Nouvelle tâche" required>{{ old('task') }}</textarea></div>
-        <div>
-            <label for="1"><input type="checkbox" name="1"> Travail</label>
-            <label for="2"><input type="checkbox" name="2"> Loisirs</label>
-        </div>
-        <div><button type="submit">Créer la tâche</button></div> --}}
-
+        <div><textarea name="name" placeholder="Nouveau pondérateur" required>{{ old('name') }}</textarea></div>
+        <div><input name="coefficient" type="number" min="1" max="10" value="1" required></div>
+        <div><button type="submit">Créer la tâche</button></div>
 
     </form>
 

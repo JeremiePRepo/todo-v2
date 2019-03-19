@@ -11,8 +11,7 @@
 
     <h1>Créer une nouvelle tâche</h1>
 
-    <a href="/">Déconnexion</a>
-    <a href="{!! url('todolist') !!}">Retour aux tâches</a>
+    @include('parts.menu')
 
     @if ($errors->any())
         <div>

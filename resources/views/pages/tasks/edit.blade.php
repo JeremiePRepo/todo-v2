@@ -11,8 +11,7 @@
 
     <h1>Éditer une tâche</h1>
 
-    <a href="/">Déconnexion</a>
-    <a href="{!! url('todolist') !!}">Retour aux tâches</a>
+    @include('parts.menu')
 
     <form method="POST" action="/todolist/{{ $task->id }}">
 

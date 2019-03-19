@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Ponderator extends Model
 {
     // @var array
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'coefficient',
+    ];
 
     /**
      * Défini la relation avec les tâches.
