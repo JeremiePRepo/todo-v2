@@ -93,6 +93,7 @@ class TasksController extends Controller
      */
     public function destroy(Task $task)
     {
+        $task->ponderators()->detach();
         $task->delete();
 
         return redirect('/todolist');
